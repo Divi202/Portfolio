@@ -1,9 +1,16 @@
 import "./App.css";
+// import About from "./components/About";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <h1 className="text-red-900">My Portfolio</h1>
+      <main className="mx-40">
+        <Navbar />
+        <Hero />
+        {/* <About /> */}
+      </main>
     </>
   );
 }
