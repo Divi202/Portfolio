@@ -6,10 +6,13 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <main className="mx-40">
-        <Navbar />
-        <Hero />
-        {/* <About /> */}
+      <main className="h-screen bg-slate-950 text-white font-inter">
+        <div className="mx-16 md:mx-32 lg:mx-40">
+          {" "}
+          <Navbar />
+          <Hero />
+          {/* <About /> */}
+        </div>
       </main>
     </>
   );

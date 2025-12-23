@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="h-16 border flex justify-between items-center">
+    <div className="h-16 flex justify-between items-center">
       <div className="py-3 text-2xl">Divya</div>
       <nav className="py-3 flex gap-4 items-center">
         <ul>
