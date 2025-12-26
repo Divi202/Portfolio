@@ -1,31 +1,101 @@
-const Navbar = () => {
+"use client";
+import {
+  NavbarUI,
+  NavBody,
+  NavItems,
+  MobileNav,
+  NavbarLogo,
+  // NavbarButton,
+  MobileNavHeader,
+  MobileNavToggle,
+  MobileNavMenu,
+} from "@/components/ui/navbar-ui";
+import { useState } from "react";
+
+export function Navbar() {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Experience",
+      link: "#experience",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+    },
+  ];
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="h-16 flex justify-between items-center">
-      <div className="py-3 text-2xl">Divya</div>
-      <nav className="py-3 flex gap-4 items-center">
-        <ul>
-          {" "}
-          <a href="/">Home</a>
-        </ul>
-        <ul>
-          {" "}
-          <a href="#about">About</a>
-        </ul>
-        <ul>
-          {" "}
-          <a href="#experience">Experience</a>
-        </ul>
-        <ul>
-          {" "}
-          <a href="#projects">Projects</a>
-        </ul>
-        <ul>
-          {" "}
-          <a href="#contact">Contact</a>
-        </ul>
-      </nav>
+    <div className="relative w-full">
+      <NavbarUI>
+        {/* Desktop Navigation */}
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          {/* <div className="flex items-center gap-4">
+            <NavbarButton variant="secondary">Login</NavbarButton>
+            <NavbarButton variant="primary">Book a call</NavbarButton>
+          </div> */}
+        </NavBody>
+
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+            {/* <div className="flex w-full flex-col gap-4">
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Login
+              </NavbarButton>
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Book a call
+              </NavbarButton>
+            </div> */}
+          </MobileNavMenu>
+        </MobileNav>
+      </NavbarUI>
+
+      {/* Navbar */}
     </div>
   );
-};
-
-export default Navbar;
+}

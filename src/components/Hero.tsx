@@ -1,3 +1,5 @@
+import { Button } from "./ui/button";
+
 const Hero = () => {
   return (
     <div id="hero" className="h-full my-24 flex gap-4">
@@ -10,12 +12,12 @@ const Hero = () => {
           web-based solutions.
         </p>
         <div className="flex gap-4">
-          <button className="bg-sky-600 rounded-3xl text-white text-base font-semibold px-12 py-2 hover:bg-sky-700 hover:text-slate-100">
+          {/* <button className="bg-sky-600 rounded-3xl text-white text-base font-semibold px-12 py-2 hover:bg-sky-700 hover:text-slate-100">
             Resume
           </button>
-          <button className="bg-neutral-500 rounded-3xl text-white text-base font-semibold px-12 py-2 hover:bg-neutral-600 hover:text-slate-100">
-            Contact
-          </button>
+          <button className="">Contact</button> */}
+          <Button name="Resume" />
+          <Button name="Contact" />
         </div>
       </section>
       <section className="flex items-center justify-center w-1/2 ">
