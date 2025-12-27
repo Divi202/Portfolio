@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+// import { SocialButton } from "./ui/social-buttons";
 
 const Hero = () => {
   return (
@@ -21,10 +22,11 @@ const Hero = () => {
           adipisicing elit.
         </p>
         {/* Social links */}
-        <div className="flex gap-4 mt-4">
-          <Button name="Resume" />
-          <Button name="Contact" />
-        </div>
+        {/* <div className="flex gap-4 mt-4">
+          <SocialButton iconName="LinkedIn" />
+          <SocialButton iconName="Github" />
+          <SocialButton iconName="Leetcode" />
+        </div> */}
         {/* CTA button */}
         <div className="flex gap-4 mt-4">
           <Button name="Resume" />
