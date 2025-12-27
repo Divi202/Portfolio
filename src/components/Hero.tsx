@@ -3,8 +3,9 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div id="hero" className="h-full my-24 flex gap-10">
-      <section className="flex flex-col gap-5 justify-center w-[70%]">
+    <section id="hero" className="h-full py-32 flex gap-10">
+      {/* Left content : Text - Introduction  */}
+      <div className="flex flex-col gap-5 justify-center w-[70%]">
         <h1 className="text-5xl font-bold">
           {/* Heading */}
           Hello, It's <span className="text-rose-400 font-bold">Divya</span>
@@ -32,15 +33,16 @@ const Hero = () => {
           <Button name="Resume" />
           <Button name="Contact" />
         </div>
-      </section>
-      <section className="flex items-center justify-end w-[30%]">
+      </div>
+      {/* Right content: Image  */}
+      <div className="flex items-center justify-end w-[30%]">
         <img
           className="border-2 rounded-[50%] h-90 w-90"
           src="src/assets/download.jpg"
           alt="hero"
         />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
