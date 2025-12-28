@@ -50,10 +50,12 @@ interface MobileNavMenuProps {
 
 export const NavbarUI = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
+
   const { scrollY } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
+
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
