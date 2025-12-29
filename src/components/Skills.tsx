@@ -8,7 +8,7 @@ const Skills = () => {
         Skills
       </h2>
       {/* Section Content  */}
-      <div className="flex gap-4 border-2 px-10 py-20 flex-wrap">
+      <div className="flex gap-4 border-2 px-10 py-20 flex-wrap justify-center rounded-md">
         <SkillCard logo="src/assets/skills/c.svg" name="C++" />
         <SkillCard logo="src/assets/skills/html.svg" name="HTML" />
         <SkillCard logo="src/assets/skills/css.svg" name="CSS" />
