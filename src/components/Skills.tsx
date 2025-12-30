@@ -1,12 +1,10 @@
 import SkillCard from "./SkillCard";
-
+import SectionHeading from "./section-heading";
 const Skills = () => {
   return (
     <section id="skills" className="h-full pb-32 flex flex-col gap-16">
       {/* Section Heading  */}
-      <h2 className="text-2xl font-semibold text-center text-rose-400">
-        Skills
-      </h2>
+      <SectionHeading headingName="Skills" />
       {/* Section Content  */}
       <div className="flex gap-4 border-2 px-10 py-20 flex-wrap justify-center rounded-md">
         <SkillCard logo="src/assets/skills/c.svg" name="C++" />

@@ -1,12 +1,10 @@
 import { Button } from "./ui/button";
-
+import SectionHeading from "./section-heading";
 const About = () => {
   return (
     <section id="about" className="h-full pb-32 flex flex-col gap-16">
       {/* Section Heading  */}
-      <h2 className="text-2xl font-semibold text-center text-rose-400">
-        About Me
-      </h2>
+      <SectionHeading headingName="About Me" />
       {/* Section Content  */}
       <div className="h-full flex gap-20">
         {" "}

@@ -1,4 +1,5 @@
 import Carousel from "./ui/carousel";
+import SectionHeading from "./section-heading";
 const Projects = () => {
   const slideData = [
     {
@@ -48,9 +49,7 @@ const Projects = () => {
   return (
     <section id="projects" className="h-full pb-32 flex flex-col ">
       {/* Section Heading  */}
-      <h2 className="text-2xl font-semibold text-rose-400 text-center">
-        Projects
-      </h2>
+      <SectionHeading headingName="Projects" />
       {/* Section Content  */}
       <div className="relative overflow-hidden w-full h-full py-20">
         <Carousel slides={slideData} />
