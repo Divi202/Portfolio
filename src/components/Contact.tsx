@@ -9,7 +9,7 @@ const Contact = () => {
     console.log("Form submitted");
   };
   return (
-    <section id="projects" className="h-full flex flex-col ">
+    <section id="contact" className="h-full flex flex-col ">
       {/* Section Heading  */}
       <SectionHeading headingName="Contact Me" />
       {/* Section Content  */}
