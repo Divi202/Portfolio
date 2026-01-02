@@ -23,6 +23,10 @@ export function Navbar() {
       link: "#about",
     },
     {
+      name: "Skills",
+      link: "#skills",
+    },
+    {
       name: "Experience",
       link: "#experience",
     },
