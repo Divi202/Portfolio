@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="flex flex-col gap-5 justify-center w-[70%]">
         <h1 className="text-5xl font-bold">
           {/* Heading */}
-          Hello, It's <span className="text-rose-400 font-bold">Divya</span>
+          Hello, It's <span className="text-rose-400  font-bold">Divya</span>
         </h1>
         {/* Sub-heading */}
         <h2 className="text-3xl">
@@ -16,7 +16,7 @@ const Hero = () => {
           <span className="text-rose-400 font-bold">Software Developer</span>{" "}
         </h2>
         {/* Discription */}
-        <p className=" text-neutral-600 dark:text-neutral-300 text-base">
+        <p className="text-neutral-600 dark:text-neutral-300 text-base">
           I'm a passionate problem solver skilled in Javascript, C++, DSA, and
           full-stack development, driven to build impactful AI-based and
           web-based solutions. Lorem ipsum dolor sit amet, consectetur

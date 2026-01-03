@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 import SectionHeading from "./section-heading";
 const About = () => {
   return (
-    <section id="about" className="h-full py-24 flex flex-col gap-16">
+    <section id="about" className="h-full py-24 flex flex-col">
       {/* Section Heading  */}
       <SectionHeading headingName="About Me" />
       {/* Section Content  */}
