@@ -1,5 +1,6 @@
 import SectionHeading from "./section-heading";
 import { Timeline } from "./ui/timeline";
+
 const Experience = () => {
   const data = [
     {
@@ -8,7 +9,7 @@ const Experience = () => {
         <div className="flex flex-col gap-2">
           <h2 className="text-xl font-bold">QA Tester</h2>
           <p className="text-md text-rose-400">Keywords Studios</p>
-          <ul className="list-disc pl-5 mt-2 space-y-2 mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          {/* <ul className="list-disc pl-5 mt-2 space-y-2 mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             <li className="pb-2">
               Worked on AAA game titles ensuring gameplay testing, bug tracking,
               and performance validation across platforms
@@ -18,7 +19,7 @@ const Experience = () => {
             </li>
             <li className="pb-2">Logged 100+ critical bugs using JIRA</li>
             <li>Contributed to day-zero patch readiness</li>
-          </ul>
+          </ul> */}
         </div>
       ),
     },
@@ -52,7 +53,9 @@ const Experience = () => {
       {/* Section Heading  */}
       <SectionHeading headingName="Experience & Education" />
       {/* Section Content  */}
-      <Timeline data={data} />
+      <div className="relative w-full overflow-clip">
+        <Timeline data={data} />
+      </div>
     </section>
   );
 };
