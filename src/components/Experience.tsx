@@ -48,7 +48,7 @@ const Experience = () => {
     },
   ];
   return (
-    <section id="experience" className="h-full pb-32 flex flex-col gap-16">
+    <section id="experience" className="h-full py-24 flex flex-col gap-16">
       {/* Section Heading  */}
       <SectionHeading headingName="Experience & Education" />
       {/* Section Content  */}

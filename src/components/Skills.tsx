@@ -2,7 +2,7 @@ import SkillCard from "./SkillCard";
 import SectionHeading from "./section-heading";
 const Skills = () => {
   return (
-    <section id="skills" className="h-full pb-32 flex flex-col gap-16">
+    <section id="skills" className="h-full py-24 flex flex-col gap-16">
       {/* Section Heading  */}
       <SectionHeading headingName="Skills" />
       {/* Section Content  */}

@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section id="hero" className="h-full py-32 flex gap-10">
+    <section id="hero" className="h-full py-24 flex gap-10">
       {/* Left content : Text - Introduction  */}
       <div className="flex flex-col gap-5 justify-center w-[70%]">
         <h1 className="text-5xl font-bold">
@@ -16,7 +16,7 @@ const Hero = () => {
           <span className="text-rose-400 font-bold">Software Developer</span>{" "}
         </h2>
         {/* Discription */}
-        <p className="text-slate-200 text-base">
+        <p className=" text-neutral-600 dark:text-neutral-300 text-base">
           I'm a passionate problem solver skilled in Javascript, C++, DSA, and
           full-stack development, driven to build impactful AI-based and
           web-based solutions. Lorem ipsum dolor sit amet, consectetur
