@@ -1,7 +1,14 @@
 import { Button } from "./ui/button";
+import { FlipWords } from "./ui/flip-words";
 // import { SocialButton } from "./ui/social-buttons";
 
 const Hero = () => {
+  const words = [
+    "Software Developer",
+    "Frontend Developer",
+    "AI Enthusiast",
+    "Full-Stack Developer",
+  ];
   return (
     <section id="hero" className="h-full py-24 flex gap-10">
       {/* Left content : Text - Introduction  */}
@@ -13,7 +20,10 @@ const Hero = () => {
         {/* Sub-heading */}
         <h2 className="text-3xl">
           I'm a{" "}
-          <span className="text-rose-400 font-bold">Software Developer</span>{" "}
+          <span className="text-rose-400 font-bold">
+            {" "}
+            <FlipWords words={words} /> <br />
+          </span>{" "}
         </h2>
         {/* Discription */}
         <p className="text-neutral-600 dark:text-neutral-300 text-base">
