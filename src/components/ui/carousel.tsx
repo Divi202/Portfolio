@@ -87,7 +87,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full bg-neutral-800 rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
           style={{
             transform:
               current === index
@@ -96,7 +96,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 w-[120%] h-[120%] md:h-[50%] object-fill opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -107,25 +107,25 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             decoding="sync"
           />
           {current === index && (
-            <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-neutral-800 md:bg-black/30 transition-all duration-1000" />
           )}
         </div>
 
         <article
-          className={`relative p-[12vmin] transition-opacity duration-1000 ease-in-out ${
+          className={`relative flex flex-col gap-4 md:mt-18 lg:mt-24 w-[120%] md:h-[50%]  p-[8vmin] md:p-[12vmin] transition-opacity duration-1000 ease-in-out ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-md md:text-lg lg:text-xl font-bold relative">
+          <h2 className="text-sm  md:text-lg lg:text-xl font-bold relative">
             {title}
           </h2>
-          <p className=" mt-4 text-xs md:text-sm lg:text-base relative">
+          <p className="text-xs md:text-sm lg:text-base relative">
             {description}
           </p>
-          <p className=" mt-2 text-xs md:text-sm font-semibold  relative">
+          <p className="text-xs md:text-sm font-semibold  relative">
             ({technologies.join(" , ")})
           </p>
-          <div className="flex justify-center w-full gap-4 mt-6">
+          <div className="flex justify-center w-full gap-4 mt-2">
             <Button name="Github" link={githubLink} />
             <Button name="Live Demo" link={liveDemoLink} />
           </div>
