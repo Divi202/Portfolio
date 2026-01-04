@@ -3,6 +3,7 @@ import SectionHeading from "./section-heading";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/text-area";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,13 +44,23 @@ const Contact = () => {
             />
           </LabelInputContainer>
 
-          <button
+          {/* <button
             className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
             type="submit"
           >
             Send Message
             <BottomGradient />
-          </button>
+          </button> */}
+
+          <div className="">
+            <HoverBorderGradient
+              containerClassName=" group/btn  relative h-11 w-full rounded-full"
+              as="button"
+              className="dark:bg-black dark:text-white  bg-white text-black flex items-center space-x-2 px-10 text-sm font-semibold"
+            >
+              <span>Send Message</span>
+            </HoverBorderGradient>
+          </div>
 
           {/* <div className="my-8 h-px  w-full bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" /> */}
         </form>

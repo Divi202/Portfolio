@@ -3,7 +3,7 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 export function Button(props) {
   return (
-    <div className="">
+    <div>
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
