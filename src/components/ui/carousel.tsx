@@ -107,21 +107,19 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             decoding="sync"
           />
           {current === index && (
-            <div className="absolute inset-0 bg-neutral-800 md:bg-black/30 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-neutral-800 md:bg-black/60 transition-all duration-1000" />
           )}
         </div>
 
         <article
-          className={`relative flex flex-col gap-4 md:mt-18 lg:mt-24 w-[120%] md:h-[50%]  p-[8vmin] md:p-[12vmin] transition-opacity duration-1000 ease-in-out ${
-            current === index ? "opacity-100 visible" : "opacity-0 invisible"
+          className={`relative flex flex-col gap-4 md:mt-24 w-[120%] md:h-[50%]  p-[8vmin] md:p-[12vmin] transition-opacity duration-1000 ease-in-out ${
+            current === index
+              ? "opacity-100 visible"
+              : "opacity-0 invisible md:opacity-50 md:visible"
           }`}
         >
-          <h2 className="text-sm  md:text-lg lg:text-xl font-bold relative">
-            {title}
-          </h2>
-          <p className="text-xs md:text-sm lg:text-base relative">
-            {description}
-          </p>
+          <h2 className="text-sm  md:text-xl font-bold relative">{title}</h2>
+          <p className="text-xs md:text-base relative">{description}</p>
           <p className="text-xs md:text-sm font-semibold  relative">
             ({technologies.join(" , ")})
           </p>
