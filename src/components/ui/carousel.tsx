@@ -112,21 +112,20 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
+          className={`relative p-[12vmin] transition-opacity duration-1000 ease-in-out ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          {/* <h3>{title}</h3> */}
-          <h2 className="text-md md:text-xl lg:text-2xl font-semibold relative">
+          <h2 className="text-md md:text-lg lg:text-xl font-bold relative">
             {title}
           </h2>
-          <p className=" mt-4 text-sm md:text-md lg:text-lg relative">
+          <p className=" mt-4 text-xs md:text-sm lg:text-base relative">
             {description}
           </p>
-          <p className=" mt-2 text-xs md:text-sm lg:text-md font-semibold  relative">
+          <p className=" mt-2 text-xs md:text-sm font-semibold  relative">
             ({technologies.join(" , ")})
           </p>
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center w-full gap-4 mt-6">
             <Button name="Github" link={githubLink} />
             <Button name="Live Demo" link={liveDemoLink} />
           </div>
@@ -165,16 +164,16 @@ interface CarouselProps {
 }
 
 export default function Carousel({ slides }: CarouselProps) {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
 
   const handlePreviousClick = () => {
     const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
+    setCurrent(previous < 0 ? slides.length - 2 : previous);
   };
 
   const handleNextClick = () => {
     const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
+    setCurrent(next === slides.length ? 1 : next);
   };
 
   const handleSlideClick = (index: number) => {
