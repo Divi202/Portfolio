@@ -11,8 +11,8 @@ const About = () => {
         {/* Left content : Image  */}
         <div className="flex items-center justify-start w-[40%]">
           <img
-            className="border-2 rounded-[50%] h-90 w-90 rotate-y-180"
-            src="src/assets/download.jpg"
+            className="border-2 rounded-[50%] h-90 w-90 object-cover object-[70%_30%]"
+            src="src/assets/main_photo.jpg"
             alt="hero"
           />
         </div>
