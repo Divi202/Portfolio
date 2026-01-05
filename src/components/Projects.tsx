@@ -5,7 +5,7 @@ const Projects = () => {
     {
       title: "Sickco - Heathcare Assitant AI",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad asperiores soluta porro et est tempora beatae fuga aliquid quo assumenda.",
+        "A web-based AI healthcare assistant that uses an LLM to provide symptom-related guidance and health insights, built with a modern full-stack stack.",
       technologies: [
         "React",
         "TailwindCSS",
@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "Sickco Pre-Launch Landing Page",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad asperiores soluta porro et est tempora beatae fuga aliquid quo assumenda.",
+        "A conversion-focused pre-launch landing page built to showcase Sickco’s vision, highlight key features, and collect early access sign-ups.",
       technologies: ["React", "TailwindCSS", "JavaScript", "Next.js", "Vercel"],
       githubLink: "",
       liveDemoLink: "",
@@ -32,7 +32,7 @@ const Projects = () => {
     {
       title: "Divi AI Landing Page",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad asperiores soluta porro et est tempora beatae fuga aliquid quo assumenda.",
+        "A concept landing page for Divi AI, an AI stylist idea designed to communicate the product vision and user journey through a modern, responsive interface.",
       technologies: ["React", "TailwindCSS", "JavaScript", "Next.js", "Vercel"],
       githubLink: "",
       liveDemoLink: "",
