@@ -10,9 +10,9 @@ const Hero = () => {
     "Full-Stack Developer",
   ];
   return (
-    <section id="hero" className="h-full py-24 flex gap-10">
+    <section id="hero" className="h-full py-32 flex gap-10">
       {/* Left content : Text - Introduction  */}
-      <div className="flex flex-col gap-5 justify-center w-[70%]">
+      <div className="flex flex-col gap-5 justify-center w-[60%]">
         <h1 className="text-5xl font-bold">
           {/* Heading */}
           Hello, It's <span className="text-rose-400  font-bold">Divya</span>
@@ -25,12 +25,10 @@ const Hero = () => {
             <FlipWords words={words} /> <br />
           </span>{" "}
         </h2>
-        {/* Discription */}
-        <p className="text-neutral-600 dark:text-neutral-300 text-base">
-          I'm a passionate problem solver skilled in Javascript, C++, DSA, and
-          full-stack development, driven to build impactful AI-based and
-          web-based solutions. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit.
+        {/* Discription -> who are you + what do you do*/}
+        <p className="text-neutral-600 dark:text-neutral-300 text-base w-3/4 text-justify">
+          I enjoy solving problems and building practical web and AI-driven
+          solutions using JavaScript, C++, and full-stack technologies.
         </p>
         {/* Social links */}
         {/* <div className="flex gap-4 mt-4">
@@ -45,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Right content: Image  */}
-      <div className="flex items-center justify-end w-[30%]">
+      <div className="flex items-center justify-end w-[40%]">
         <img
           className="border-2 rounded-[50%] h-90 w-90"
           src="src/assets/download.jpg"

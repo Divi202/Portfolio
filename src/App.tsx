@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <main className="dark max-h-full bg-white text-black dark:bg-black dark:text-white font-inter">
-        <div className="mx-8 md:mx-32 lg:mx-40">
+        <div className="mx-8 md:mx-32 lg:mx-48">
           <Navbar />
           <Hero />
           <About />
