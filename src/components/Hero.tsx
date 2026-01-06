@@ -10,21 +10,27 @@ const Hero = () => {
     "Full-Stack Developer",
   ];
   return (
-    <section id="hero" className="h-full py-32 flex gap-10">
+    <section id="hero" className="h-full flex flex-col md:flex-row gap-10">
       {/* Left content : Text - Introduction  */}
-      <div className="flex flex-col gap-5 justify-center w-[60%]">
-        <h1 className="text-5xl font-bold">
-          {/* Heading */}
-          Hello, It's <span className="text-rose-400  font-bold">Divya</span>
-        </h1>
+      <div className="flex flex-col gap-5 items-center md:items-start justify-center md:w-[60%]">
+        <div className="text-5xl font-bold flex flex-col md:flex-row gap-4 items-center md:items-start justify-center">
+          {" "}
+          <h1>
+            {/* Heading */}
+            Hello, It's
+          </h1>
+          <h1 className="text-rose-400">Divya</h1>
+        </div>
+
         {/* Sub-heading */}
-        <h2 className="text-3xl">
-          I'm a{" "}
-          <span className="text-rose-400 font-bold">
-            {" "}
-            <FlipWords words={words} /> <br />
-          </span>{" "}
-        </h2>
+        <div className="text-3xl flex flex-col md:flex-row gap-1 items-center md:items-start justify-center">
+          {" "}
+          <h2>I'm a </h2>
+          <h2 className="text-rose-400 font-bold">
+            <FlipWords words={words} />
+          </h2>
+        </div>
+
         {/* Discription -> who are you + what do you do*/}
         <p className="text-neutral-600 dark:text-neutral-300 text-base w-3/4 text-justify">
           I enjoy solving problems and building practical web and AI-driven
@@ -43,7 +49,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Right content: Image  */}
-      <div className="flex items-center justify-end w-[40%]">
+      <div className="flex items-center justify-end md:w-[40%]">
         <img
           className="border-2 rounded-[50%] h-90 w-90 rotate-y-180 object-cover object-[70%_30%]"
           src="src/assets/main_photo.jpg"

@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <main className="dark max-h-full bg-white text-black dark:bg-black dark:text-white font-inter">
-        <div className="mx-8 md:mx-32 lg:mx-48">
+        <div className="flex flex-col gap-12 md:gap-24 lg:gap-40 mx-8 md:mx-32 lg:mx-48">
           <Navbar />
           <Hero />
           <About />
@@ -21,8 +21,8 @@ function App() {
           <Projects />
           <Experience />
           <Contact />
-          <Footer />
         </div>
+        <Footer />
       </main>
     </>
   );

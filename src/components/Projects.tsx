@@ -51,7 +51,7 @@ const Projects = () => {
     // },
   ];
   return (
-    <section id="projects" className="h-full py-24 flex flex-col ">
+    <section id="projects" className="h-full flex flex-col ">
       {/* Section Heading  */}
       <SectionHeading headingName="Projects" />
       {/* Section Content  */}
