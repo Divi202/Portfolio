@@ -9,6 +9,11 @@ const Hero = () => {
     "AI Enthusiast",
     "Full-Stack Developer",
   ];
+
+  const handledContactClick = () => {
+    window.location.href = "#contact";
+  };
+
   return (
     <section id="hero" className="h-full flex flex-col md:flex-row gap-10">
       {/* Left content : Text - Introduction  */}
@@ -45,7 +50,7 @@ const Hero = () => {
         {/* CTA button */}
         <div className="flex gap-4 mt-4">
           <Button name="Resume" />
-          <Button name="Contact" />
+          <Button name="Contact" handledContactClick={handledContactClick} />
         </div>
       </div>
       {/* Right content: Image  */}
