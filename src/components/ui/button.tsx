@@ -5,10 +5,11 @@ export function Button(props) {
   const handleBtnClick = () => {
     if (props.name == "Contact") {
       props.handledContactClick();
-    }
-    if (props.name == "Resume") {
+    } else if (props.name == "Resume") {
       // directly defined here as used in multiple files
       window.open("src/assets/resume/Divya_Resume.pdf", "_blank");
+    } else if (props.link) {
+      window.open(props.link, "_blank");
     }
   };
   return (
