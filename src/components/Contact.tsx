@@ -4,11 +4,38 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/text-area";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
+);
+
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const formData = {
+    name: { name },
+    email: { email },
+    message: { message },
   };
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const { error } = await supabase.from("contact_me").insert(formData);
+    if (error) {
+      // alert(error.message)
+      console.error("Error inserting data:", error.message);
+    } else {
+      console.log("Data inserted successfully:");
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+    console.log("Form submitted");
+  }
   return (
     <section id="contact" className="h-full flex flex-col ">
       {/* Section Heading  */}
@@ -28,12 +55,24 @@ const Contact = () => {
           <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
             <LabelInputContainer>
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Tyler" type="text" />
+              <Input
+                id="name"
+                placeholder="Tyler"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </LabelInputContainer>
           </div>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+            <Input
+              id="email"
+              placeholder="projectmayhem@fc.com"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="message">Message</Label>
@@ -41,6 +80,8 @@ const Contact = () => {
               rows={5}
               maxLength={500}
               placeholder="Your message here..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </LabelInputContainer>
 
