@@ -57,7 +57,7 @@ const Contact = () => {
               <Label htmlFor="name">Name</Label>
               <Input
                 id="name"
-                placeholder="Tyler"
+                placeholder="Your name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -68,7 +68,7 @@ const Contact = () => {
             <Label htmlFor="email">Email Address</Label>
             <Input
               id="email"
-              placeholder="projectmayhem@fc.com"
+              placeholder="Your email address"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
