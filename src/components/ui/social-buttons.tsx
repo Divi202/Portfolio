@@ -1,9 +1,9 @@
 "use client";
-import { IconBrandLeetcode } from "@tabler/icons-react";
+// import { IconBrandLeetcode } from "@tabler/icons-react";
 import { HoverBorderGradient } from "./hover-border-gradient";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
+// import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
-export function SocialButton(props) {
+export function SocialButton() {
   return (
     <div className="">
       <HoverBorderGradient
@@ -19,7 +19,7 @@ export function SocialButton(props) {
           ) : (
             <FaLinkedin />
           )} */}
-          <IconBrandLeetcode />
+          {/* <IconBrandLeetcode /> */}
         </span>
       </HoverBorderGradient>
     </div>

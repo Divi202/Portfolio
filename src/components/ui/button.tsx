@@ -1,10 +1,15 @@
 "use client";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
-export function Button(props) {
+interface ButtonProps {
+  name: string;
+  link?: string;
+  handledContactClick?: () => void;
+}
+export function Button(props: ButtonProps) {
   const handleBtnClick = () => {
     if (props.name == "Contact") {
-      props.handledContactClick();
+      props.handledContactClick?.();
     } else if (props.name == "Resume") {
       // directly defined here as used in multiple files
       window.open("src/assets/resume/Divya_Resume.pdf", "_blank");
