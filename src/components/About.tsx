@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import SectionHeading from "./section-heading";
+import mainPhoto from "../assets/main_photo.jpg";
 const About = () => {
   return (
     <section id="about" className="h-full flex flex-col gap-16">
@@ -13,7 +14,7 @@ const About = () => {
         <div className="hidden md:flex items-center justify-start md:w-[40%]">
           <img
             className="border-2 rounded-[50%] h-90 w-90 object-cover object-[70%_30%]"
-            src="src/assets/main_photo.jpg"
+            src={mainPhoto}
             alt="hero"
           />
         </div>

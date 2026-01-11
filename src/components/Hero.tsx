@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { FlipWords } from "./ui/flip-words";
 // import { SocialButton } from "./ui/social-buttons";
+import mainPhoto from "../assets/main_photo.jpg";
 
 const Hero = () => {
   const words = [
@@ -57,7 +58,8 @@ const Hero = () => {
       <div className="flex items-center justify-end md:w-[40%]">
         <img
           className="border-2 rounded-[50%] h-90 w-90 rotate-y-180 object-cover object-[70%_30%]"
-          src="src/assets/main_photo.jpg"
+          // src="src/assets/main_photo.jpg" -> only works in dev mode
+          src={mainPhoto}
           alt="hero"
         />
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
-
+import resume from "../../assets/resume/Divya_Resume.pdf";
 interface ButtonProps {
   name: string;
   link?: string;
@@ -12,7 +12,7 @@ export function Button(props: ButtonProps) {
       props.handledContactClick?.();
     } else if (props.name == "Resume") {
       // directly defined here as used in multiple files
-      window.open("src/assets/resume/Divya_Resume.pdf", "_blank");
+      window.open(`${resume}`, "_blank");
     } else if (props.link) {
       window.open(props.link, "_blank");
     }
