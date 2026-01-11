@@ -9,7 +9,7 @@ interface SlideData {
   technologies: string[];
   githubLink: string;
   liveDemoLink: string;
-  src: any;
+  src: string;
 }
 
 interface SlideProps {

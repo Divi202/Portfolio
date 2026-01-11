@@ -3,15 +3,15 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 const Skills = () => {
   const skills = [
-    { logo: "public/skills/c.svg", name: "C++" },
-    { logo: "public/skills/html.svg", name: "HTML" },
-    { logo: "public/skills/css.svg", name: "CSS" },
-    { logo: "public/skills/javascript.svg", name: "JavaScript" },
-    { logo: "public/skills/react.svg", name: "React" },
-    { logo: "public/skills/typescript.svg", name: "TypeScript" },
-    { logo: "public/skills/git.svg", name: "Git" },
-    { logo: "public/skills/tailwindcss.svg", name: "Tailwind CSS" },
-    { logo: "public/skills/vite.svg", name: "Vite" },
+    { logo: "/skills/c.svg", name: "C++" },
+    { logo: "/skills/html.svg", name: "HTML" },
+    { logo: "/skills/css.svg", name: "CSS" },
+    { logo: "/skills/javascript.svg", name: "JavaScript" },
+    { logo: "/skills/react.svg", name: "React" },
+    { logo: "/skills/typescript.svg", name: "TypeScript" },
+    { logo: "/skills/git.svg", name: "Git" },
+    { logo: "/skills/tailwindcss.svg", name: "Tailwind CSS" },
+    { logo: "/skills/vite.svg", name: "Vite" },
   ];
 
   return (
